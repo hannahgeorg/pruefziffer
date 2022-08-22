@@ -1,0 +1,79 @@
+<html><head>
+    <title>Erstes-JavaScript-Programm</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    
+    <script>
+        "use strict";
+    function fPrüfziffer () {
+        var v1;
+        var v2;
+        var v3;
+        var v4;
+        var v5;
+        var v6;
+        var v7;
+        var v8;
+        var v9;
+        var v10;
+        var v11;
+        var v12;
+        var Prüfsumme;
+        var Ergebnis;
+        var Prüfziffer;
+        var Ausgabe;
+
+        v1 = parseFloat(document.getElementById("1").value);
+        v2 = parseFloat(document.getElementById("2").value);
+        v3 = parseFloat(document.getElementById("3").value);
+        v4 = parseFloat(document.getElementById("4").value);
+        v5 = parseFloat(document.getElementById("5").value);
+        v6 = parseFloat(document.getElementById("6").value);
+        v7 = parseFloat(document.getElementById("7").value);
+        v8 = parseFloat(document.getElementById("8").value);
+        v9 = parseFloat(document.getElementById("9").value);
+        v10 = parseFloat(document.getElementById("10").value);
+        v11 = parseFloat(document.getElementById("11").value);
+        v12 = parseFloat(document.getElementById("12").value);
+        
+        Prüfsumme= (v1*1)+(v2*3)+(v3*1)+(v4*3)+(v5*1)+(v6*3)+(v7*1)+(v8*3)+(v9*1)+(v10*3)+(v11*1)+(v12*3);
+
+        Prüfziffer=10-(Prüfsumme%10);
+				
+				if(Prüfziffer==10){				
+					Prüfziffer=0;
+				}
+				
+				Ausgabe= "Die Prüfsumme ist: " +Prüfsumme+ " und die Prüfziffer ist: " +Prüfziffer;
+        document.getElementById("Ausgabe").innerHTML = Ausgabe;
+
+
+
+    }
+        
+        
+        
+    </script>
+
+
+<body>
+    <h1>Prüfziffer berechnen</h1>
+    <input id="1" type="text" value="1">
+    <input id="2" type="text" value="1">
+    <input id="3" type="text" value="1">
+    <input id="4" type="text" value="1">
+    <input id="5" type="text" value="1">
+    <input id="6" type="text" value="1">
+    <input id="7" type="text" value="1">
+    <input id="8" type="text" value="1">
+    <input id="9" type="text" value="1">
+    <input id="10" type="text" value="1">
+    <input id="11" type="text" value="1">
+    <input id="12" type="text" value="1"> </br>
+
+    <button onClick="fPrüfziffer ();">Beschriftung</button>
+
+    <div id="Ausgabe"></div>
+</body>
+
+</html>
